@@ -1,0 +1,33 @@
+admin|browse activated auctions
+admin|browse unaudited auctions
+admin|display all users
+admin|approve auction|1
+admin|decline auction|1
+admin|search auction|1
+admin|send msg to user|1|hello
+
+create account|aaa|123|10000
+login|1
+logout
+
+display my info
+display my items
+display my tags
+display my msgs
+browse activated auctions
+display all users
+
+delete item|1
+withdraw auction|1
+confirm auction|1
+search auction by id|1
+search auction by tag|New
+finish payment|1
+
+change credit card|456|20000
+add item|myitem|good
+add tag to item|1|New
+delete tag from item|1|New
+bid for auction|1|200
+
+apply for auction|1|100|1000
