@@ -1,0 +1,120 @@
+<< Description >>
+---------------------
+
+< Aim of the program>
+
+As online trading of second-hand products is growing rapidly in recent years, our team is required to build a Second-hand Auction software to enable a trading platform. This system is aiming for providing convenient and completed functions to satisfy users' demands on publishing and finishing transactions.
+
+< Mechanism of auction process >
+
+User' s items created will be stored in each account' s private stock. Two independent tags can be attached to an item, named "New" and "Virtual". Those published items with required information will create an auction pending for audition. Audition will be done by the system administrator. Only those approved auctions will be activated for global access, while declined ones will be canceled and change item state back to unpublished.
+Users can browse only activated auctions and have no authority to manage auction lists. Users should be able to browse the entire activated auction list or search according to a specific tag attached to sold items. They can only withdraw their own auctions or participate in bidding of others' auctions.
+A transaction can only be done when conditions of finishing an auction are satisfied. The payment will be done using credit cards bound to seller and buyer’s accounts.
+
+
+
+<< Installation >>
+---------------------
+
+  1. Install the latest Java SE Runtime Environment 
+      (Note: it must be latest version, lower version can not execute the program)
+     https://www.oracle.com/java/technologies/javase-downloads.html
+
+  2. Ensure you have setup the path for java
+       
+
+Windows
+----
+  3. Double Click the file ‘run.bat’
+
+Mac or Linux
+----  
+  3. Open the terminal and input ‘java -jar {file_path}/AuctionSystem.jar’
+
+
+
+
+ 
+<< User Guideline >>
+---------------------------
+
+The valid format of all commands are showing below.
+(Sample command could be found in sample_cmd.txt)
+
+1. Create user account and log in: 
+	create account|{user_name}|{card_id}|{card_balance}
+	login|{user_id}
+
+	For example: 
+		create account|Esther CHE|001|1000.05
+		login|1
+
+2. User command:
+	Display profile information:
+		display my info
+	
+	Display profile items:
+		display my items
+
+	Check tags could be added:
+		display all tags
+
+	Check massages:
+		display my msgs
+
+	Browse all activated auctions:
+		browse activated auctions
+
+	Display all users:
+		display all users
+
+	Manage items:
+		add item|{item_name}|{item_description}
+		delete item|{item_id}
+		add tag to item|{item_id}|{tag_name}
+		delete tag from item|{item_id}|{tag_name}
+
+	Bid for auction:
+		bid for auction|{auction_id}|{bid_price}
+
+	Apply for auction:
+		apply for auction|{item_id}|{floor_price}|{no-bargain_price}
+
+	Withdraw auction:
+		withdraw auction|{auction_id}
+
+	Confirm auction:
+		confirm auction|{auction_id}
+
+	Search auction:
+		search auction by id|{auction_id}
+		search auction by tag|{tag_name}
+	
+	Finish payment:
+		finish payment|{auction_id}
+
+	Change credit card:
+		change credit card|{new_card_id}|{new_card_balance}
+
+3. Admin command:
+	Browse auctions:
+		admin|browse activated auctions
+		admin|browse unaudited auctions
+	
+	Display all users:
+		admin|display all users
+
+	Manage auctions:
+		admin|approve auction|{auction_id}
+		admin|decline auction|{auction_id}
+
+	Search auction:
+		admin|search auction|{auction_id}
+
+	Send massage:
+		admin|send msg to user|{user_id}|{msg}
+
+
+
+-----------------------------------------------------------------
+
